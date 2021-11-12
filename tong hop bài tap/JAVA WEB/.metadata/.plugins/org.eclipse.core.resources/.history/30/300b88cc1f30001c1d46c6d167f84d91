@@ -1,0 +1,19 @@
+img {
+	border-radius: 50%;
+	display: block; margin-left : auto; margin-right : auto;
+	height: 300px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+form {
+	padding: 20px 0 0 0;
+	margin: auto;
+	width: 400px;
+}
+
+input {
+	width: 400px
+	
+}

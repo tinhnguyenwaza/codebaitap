@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("but1").click(function(event){
+   
+    $("#hienthi").addClass('d');
+  })
+  
+    $("#nhap").click(function(event){
+    var name = $('#a').text();
+    alert(a);
+    });
+  });
+
+ 
+
+</script>
+<style>
+div {
+  position: fixed;
+  display: inline-block;
+  margin: auto;
+  height: 300px;
+  background-color: antiquewhite;
+  width: 200px;
+  left: 200px;
+  opacity: 0;
+  visibility: hidden
+}
+
+.d {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+</style>
+</head>
+<body>
+
+    <button id="but1">nhập </button><br>
+    <div id="hienthi">
+        <input type="text"  id="a">
+        <button id="nhap"> nhập</button>
+    </div>
+
+</body>
+</html>

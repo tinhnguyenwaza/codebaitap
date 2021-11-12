@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+
+h1 {
+	color: blue;
+}
+
+.seach {
+	float: right;
+	display: inline-block;
+}
+
+div {
+	color: blue;
+}

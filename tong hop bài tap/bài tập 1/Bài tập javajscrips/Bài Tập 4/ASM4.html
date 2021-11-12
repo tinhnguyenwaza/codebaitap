@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='cssasm4.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+  
+  </div>  
+    <!-- phần hộp thoại modal-->
+    <div class="container -">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="glyphicon glyphicon-search btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> TÌM KIẾM</button>
+      
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              
+              <div class="modal-body">
+               <input type="text"  id="tiemKiem" value="">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="nhap">Tìm kiếm</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>  
+         
+    <div class="container">
+        <div class="row" id="display">
+           
+        </div>
+
+        <div class="row" id="display1">
+           
+        </div>
+    </div>  
+
+
+
+<a href=""></a>
+    <script>
+     //láy đữ liệu từ sever và hiểm thị ra ngoài   
+  
+    // lấy dữ liệu từ sever 
+    fetch('https://gnews.io/api/v4/top-headlines?&token=b3695fa2f90da38a306b40b601dcd002')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+       var news = data.articles;
+        display(news);
+    }); // láy dư liệu từ sever
+
+    // tìm kiếm theo từ khoá của người dùng
+    $(document).ready(function(){
+      $('#nhap').click(function(){
+      var keyWord = $('#tiemKiem').val();
+      
+      // Xoá tin tức top heading 
+      $('#display').remove();
+
+      //lấy đự liệu tièm kiếm từ sever
+    fetch('https://gnews.io/api/v4/search?q=example&token=b3695fa2f90da38a306b40b601dcd002')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (index) {
+       var indexs = index.articles;
+       soSAnh(keyWord , indexs);
+    });  
+    
+    // hàn so sánh từ khoá tìm kiếm với seach title
+    function soSAnh(keyWord , indexs) {
+      indexs.forEach(indexs => {
+       var checkInDex = indexs.title.includes(keyWord);
+       
+       if (checkInDex == true) {
+        $('#display1').append(
+        ' <div class="col-sm-4"><img class="img-fluid" src="' + indexs.image + '" alt="đây là hình ảnh"></div>' 
+        + '<div class="col-sm-8">'
+        +    '<h3><a href=" '+ indexs.url +' "> '+ indexs.title +'</a></h3>'
+        +    '<h5> '+ indexs.publishedAt +' </h5>'
+        +    '<p>Nội dung: '+ indexs.content +'</p> '
+       
+            )
+       }
+      });
+
+    }
+   
+    });
+    })
+
+    // hàm hiểm thị tin tức topheading
+    function display(news){
+     news.forEach(e => {
+        var img =  e.image;
+        var title = e.title;
+        var url = e.url;
+        var content = e.content;
+        var publishedAt = e.publishedAt;
+        $('#display').append(
+        ' <div class="col-sm-4"><img class="img-fluid" src="' + img+ '" alt="đây là hình ảnh"></div>' 
+        + '<div class="col-sm-8">'
+        +    '<h3><a href=" '+ url +' "> '+ title +'</a></h3>'
+        +    '<h5> '+ publishedAt +' </h5>'
+        +    '<p>Nội dung: '+ content +'</p> '
+       
+            )
+         });   
+    }
+    </script>
+</body>
+</html>

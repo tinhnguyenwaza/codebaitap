@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+table {
+    width: 1000px;
+    border: 1px solid black;
+   
+}
+
+ td {
+    width: 180px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.box1{ 
+    margin: 15px auto;
+    width: 300px;
+    background-color:azure;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+label {
+    float: left;
+    width: 105px;
+    margin: 3px 0px;
+    font-weight: 800;
+    width: 100%;
+}
+
+input {
+    margin: 3px 0px;
+    border: 2px solid #58257b;
+    border-radius: 4px;
+    background-color:rgb(224, 234, 235);
+    color:black;
+    width: 100%;
+    
+}
+
+h2 {
+    background-color:aquamarine;
+    text-align: center;
+}
+
+span {
+    font-size: 80%;
+    color: red;
+}
+
+.colorInput {
+    border: 2px solid red;
+    
+}
+
+#nhap {
+    width: 40%;
+    margin: 6px 0;
+    background-color:cadetblue;
+    color:black;
+    font-size: 100%;
+}
+
+#box2 {
+    margin: 15px auto;
+    width: 90%;
+
+}
+
+#box2 button {
+    width: 30%;
+    background-color: beige;
+    padding: 5px;
+    font-size: 100%;
+}
+
+#box3 {
+    margin: auto;
+}
+
+#nhap.active {
+    background-color: #04AA6D;
+   
+  }
+  
+#nhap:hover:not(.active) {
+    background-color: #555;
+   
+}
+
+#box2 button.active {
+    background-color: #04AA6D;
+   
+}
+  
+#box2 button:hover:not(.active) {
+    background-color: #555;
+   
+}
+
+input.active {
+    background-color:blanchedalmond;
+   
+  }
+  
+input:hover:not(.active) {
+    background-color:antiquewhite;
+    
+  } 
+
+td.active {
+    background-color:blanchedalmond;
+    
+  }
+ 
+td:hover:not(.active) {
+    background-color:antiquewhite;
+    
+  }  

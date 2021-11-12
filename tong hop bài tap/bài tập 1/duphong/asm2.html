@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<style>
+* { padding: 0; margin: 0; box-sizing: border-box;}
+   #container {width: 100%; background-color: #ddd;}
+ 
+.menu {
+		width: 100%;
+	   background-color: #ddd;
+	   display: inline-block;
+	}
+	.item1 {
+		float: left;
+	}
+	.item2 {
+		float: right;
+	}
+	ul {
+	  list-style-type: none;
+	  overflow: hidden;
+	}
+	
+	li {
+	  float: left;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 5px 10px;
+	  text-decoration: none;
+	}
+
+	li a:hover {
+	  background-color: white;
+	}
+
+#banner { width:100%;
+		 height: 350px; 
+		 background-image:url( https://s3.amazonaws.com/codecademy-content/courses/ltp/img/lodging.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin:0;
+}
+.topleft {
+  padding: 100px 200px 100px 25px;
+  color: white;
+  font-family: 
+  }
+ .topleft b { font-size: 25px; font-family: "Times New Roman", Times, serif;}
+ 
+#head {width:100%;
+		height: 30px;
+		background-color: #ddd;
+		padding:1px;
+		}
+#tieude { padding: 1px 20px;}
+		
+#hinhanh { width: 100%; height:300px;
+		display:inline-block;
+		background-color:#ccc;
+}		
+#danhsachhinh {width: 100%;
+				display:flex;}
+.img {width:33%; 
+		margin:10px;
+		align- center: conter;}
+img {width: 95%;
+		margin:10px;
+}
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.box p {font-size: 10px;}
+.box a {font-size: 10px;}
+#head p { font-size: 10px }
+.menu a { font-size: 8px;color:black; font-family: Arial, Helvetica, sans-serif;  font-weight: 600;}
+.topleft p {font-size: 10px;}
+p { font-size: 8px; font-family: Arial, Helvetica, sans-serif;}
+</style>
+</head>
+<body>
+
+</div>
+</body>
+<div id="container">
+  <div class="menu">
+  <div class="item1">
+	<ul>
+	  <li><a class="active" href="#home">Brand</a></li>
+	  <li><a href="#news">Browse</a></li>
+	</ul>
+  </div>
+  <div class="item2">
+	<ul>
+	  <li><a class="active" href="#home">Sign Up</a></li>
+	  <li><a href="#news">Log In</a></li>
+	   <li><a href="#news">Help</a></li>
+	</ul>
+  </div>
+</div>
+<div id="banner"> <div class="topleft"><p><b> Find a pleca to stay.</b></p>
+										<p> Rent from people in over 34,00 cities and  192 countries</p>
+											
+</div>
+</div>
+
+<div id="head"> 
+	<div id="tieude"><h4>Neihborhood Guides</h4>
+<p>Not sure where to stay? We've created neighborhood guides for cities all around the world.</p></div>
+</div>
+
+  <div id="danhsachhinh">
+    <div class="img"> 
+	   <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp/img/mexico-city.png"alt"dây là một hình ảnh">
+	   <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp/img/ny.png"alt"dây là một hình ảnh">
+	</div>
+	
+	<div class="img"> 
+		<img src="https://s3.amazonaws.com/codecademy-content/courses/ltp/img/tokyo.png"alt"dây là một hình ảnh">
+		<img src="https://s3.amazonaws.com/codecademy-content/courses/ltp/img/paris.png"alt"dây là một hình ảnh">
+	</div>
+	<div class="img"> 
+	<img src="https://s3.amazonaws.com/codecademy-content/courses/ltp/img/invite.png"alt"dây là một hình ảnh">
+	</div>
+ </div>
+
+<div class="clearfix">
+  <div class="box" style="background-color:#bbb">
+  <h5> Travel</h5>
+<p> From partments and rooms to treehouse and boats: stay in unique in 192 countries.</p>
+<a href="#">see how to trevel on aribnd</a>
+  </div>
+  <div class="box" style="background-color:#bbb">
+  <h5> Host</h5>
+<p> Renting out your unused speace could pay your bill or fund your next vacation.</p>
+<a href="#">Leam more about hosting</a>
+  </div>
+  <div class="box" style="background-color:#bbb">
+ <h5> Trust and Safety</h5>
+<p>From Verified ID to our worldwide custonmer support team, we've got your back.</p>
+<a href="#">Leam about trust at Airbnb</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+</html>

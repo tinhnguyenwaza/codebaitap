@@ -1,0 +1,145 @@
+* {
+	box - sizing:border- box;
+}
+
+.menu {
+	background-color: blue;
+	height:100px;
+	line-height: 100px;
+}
+
+ul { 
+list-style-type: none;
+
+}
+
+li { display:inline;
+	padding: 0 40px;
+	color: red;
+	font-size: 20px;
+
+}
+#menuright {
+	display:inline;
+
+}
+
+li a {
+	text-decoration: none;
+	color: red;
+	
+}
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+
+@media only screen and (min-width: 800px) {
+	
+	#menuright {
+		float:right;
+	}
+	
+	li {
+		font-size:30px;
+		color:f1f1f1;
+		
+	}
+	
+}
+
+
+/* cửa  phần menu */
+
+ #banner img {
+	 width: 100%;
+	 display: none;
+	 height: auto;
+ }
+#textbanner { 
+	 display: none;
+	 
+} 
+
+
+@media only screen and (min-width: 800px) {
+		#banner img {
+	 	 display: inline;
+ }
+#textbanner { 
+	 display: inline;
+	 font-size: 40px;
+	 position: relative;
+	 top:-200px;
+	 left:50px;
+} 
+	
+}
+
+
+
+/* cửa  phần banner */
+.color1 {
+	background-color: f2f4f1;
+	height: 20%;
+}
+
+.box1 {
+	width: 50%;
+	display: inline-block;
+	float: left;
+	height: 100%;
+	background-color: blue;
+	text-align: center;
+}
+.box2 {
+	width: 50%;
+	display: inline-block;
+	float: left;
+	height: 100%;
+	background-color: red;
+}
+
+.colortext {
+	padding: 10px 5px;
+	font-size: 15px;
+	
+}
+
+
+.color2 {
+	background-color: f1f5;
+	height: 20%;
+}
+
+.color3 {
+	background-color: blue;
+	height: 20%;
+	
+}
+
+
+
+@media only screen and (min-width: 800px) {
+	 .col {
+		 width: 33%;
+		 display: inline;
+		 float: left;	 
+	 }
+	 
+ }

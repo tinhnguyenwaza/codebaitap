@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 790px;
+    height: 1011px;
+    margin: auto;
+
+}
+
+.row1 {
+    width: 790px;
+    height: 131px;
+    padding: 30px 0 0 0 ;
+    background-color:white;
+    clear: both;
+}
+
+h1 {
+    margin: 0 0 0 340px;
+    line-height: 24px;
+}
+
+h2 {
+    margin: 10px 0 0 360px;
+    
+}
+
+img {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    left: 50px;
+    top: -40%;
+    border: 3px solid #fcb617;
+    z-index: 1;
+
+}
+
+.box1 {
+    width: 58px;
+    height: 30px;
+    position: relative;
+    left: 0;
+    top: -139px;
+    background-color: #fcb617;
+    z-index: 100;
+}
+
+.box2 {
+    width: 607px;
+    height: 30px;
+    position: relative;
+    left: 182px;
+    top: -169px;
+    background-color: #fcb617;
+    z-index: 100;
+}
+
+
+.row2 {
+    width: 300px;
+    height: 880px;
+   background-color:white;
+   display: inline-block;
+   float: left;
+}
+
+.inForMaTion {
+    padding: 80px 0 0 0;
+}
+
+p {
+    padding: 5px 0;
+}
+
+h4 {
+    color: #fcb617;
+}
+
+i {
+    color: black;
+}
+
+.skill {
+    width: 300px;
+    height: 10px;
+    background-color: #e1e1e1;
+}
+
+#pontSkill1 {
+    width: 150px;
+    height: 9px;
+    background-color: black;
+}
+
+.row3 {
+    width: 490px;
+    height: 880px;
+    background-color:#f9f0e0;
+    display: inline-block;
+    float: right;
+}

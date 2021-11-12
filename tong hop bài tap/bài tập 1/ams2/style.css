@@ -1,0 +1,87 @@
+* { padding: 0; margin: 0; box-sizing: border-box;}
+   #container {width: 100%; background-color: #ddd;}
+ 
+.menu {
+		width: 100%;
+		height:30px;
+	   background-color: #ddd;
+	   display: inline-block;
+	}
+	.item1 {
+		float: left;
+	}
+	.item2 {
+		float: right;
+	}
+	ul {
+	  list-style-type: none;
+	  overflow: hidden;
+	}
+	
+	li {
+	  float: left;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 5px 10px;
+	  text-decoration: none;
+	}
+
+	li a:hover {
+	  background-color: white;
+	}
+
+#banner { width:100%;
+		 height: 350px; 
+		 background-image:url( https://s3.amazonaws.com/codecademy-content/courses/ltp/img/lodging.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin:0;
+}
+.topleft {
+  padding: 100px 200px 100px 25px;
+  color: white;
+  font-family: 
+  }
+ .topleft b { font-size: 25px; font-family: "Times New Roman", Times, serif;}
+ 
+#head {width:100%;
+		height: 30px;
+		background-color: #ddd;
+		padding:1px;
+		}
+#tieude { padding: 1px 20px;}
+		
+#hinhanh { width: 100%; height:300px;
+		display:inline-block;
+		background-color:#ccc;
+}		
+#danhsachhinh {width: 100%;
+				display:flex;}
+.img {width:33%; 
+		padding:10px;
+		align- center: conter;}
+img {width: 95%;
+	margin:10px;
+}
+
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.box p {font-size: 10px;}
+.box a {font-size: 10px;}
+#head p { font-size: 10px }
+.menu a { font-size: 12px;color:black; font-family: Arial, Helvetica, sans-serif;  font-weight: 600;}
+.topleft p {font-size: 10px;}
+p { font-size: 8px; font-family: Arial, Helvetica, sans-serif;}

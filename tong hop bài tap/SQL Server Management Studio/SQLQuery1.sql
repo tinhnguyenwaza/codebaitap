@@ -1,0 +1,22 @@
+﻿--- tạo cở sở dư liệu mới để làm việc
+--- cú phấp	CREATE DATABASE TÊN CSDL
+CREATE DATABASE TABLE_EXERCISE_1
+---	Gọi CSDL để làm việc
+USE TABLE_EXERCISE_1
+
+--- CÂU LỆNH TẠO BẢNG
+--- CREATE TABLE NAME_TABLE (
+--- TÊN CỘT ĐỰ LIỆU 
+---  );
+CREATE TABLE KHACHHANG1 (
+    MAKH Nvarchar (5) NOT NULL PRIMARY KEY,
+	TENKH Nvarchar (30) ,
+	DIACHI	Nvarchar (300) ,
+	DT Varchar (10),
+	EMAI Varchar (30),
+)
+--- STATEMENT SELECT TABLE
+SELECT * FROM KHACHHANG1;
+
+--- STATEMENT ADD DATA TO TABLE
+

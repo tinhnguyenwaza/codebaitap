@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<div class = "informationProduct">
+			<h2> Information of pruduct 1</h2>
+			<img alt="hình ảnh" src="#">
+			<p>some text...</p>
+			</div>
+			
+			<div class = "informationProduct">
+			<h2> Information of pruduct 2</h2>
+			<img alt="hình ảnh" src="#">
+			<p>some text...</p>
+			</div>
+		
+		</div>
+		<div class="col-md-2">tinh</div>
+	</div>
+
+
+
+
+</div>

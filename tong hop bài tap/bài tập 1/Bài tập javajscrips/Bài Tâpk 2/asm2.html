@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+   
+    <title>Page Title</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='cssasm2.css'>
+   
+</head>
+<body>
+ <div id="box1">Class Marksheet</div>
+
+ <div id="div1">
+    <label>Họ và Tên: </label>
+    <input type="text" id="name" placeholder="nhập tên..."> <br>
+    <label>Điểm môn toán: </label>
+    <input type="number" id="diemToan" placeholder="nhập điểm môn toán..."><br>
+    <label>Điểm môn lý: </label>
+    <input type="number" id="diemLy" placeholder="nhập điểm môn lý..."><br>
+    <label>Điểm môn hoá: </label>
+    <input type="number" id="diemHoa" placeholder="nhập điểm môn hoá..."><br>
+    <button onclick="nhapSinhVien()" id="button1"> Nhập </button>
+</div>
+    
+        
+    
+
+    <table id="myTable">
+        <tr>
+          <td>STT</td>
+          <td>Họ Tên</td>
+          <td>Toán</td>
+          <td>Lý</td>
+          <td>Hoá</td>
+          <td>Điểm trung bình</td>
+        </tr>
+     
+      </table>
+      <div id="div2"> 
+       <p style="font-size: 25px; color: black; font-weight: 800;">Chức năng</p>  
+      <button onclick="tinhDiemTrungBinh()"  class="button2"> Tính điểm trung bình </button>
+
+      <button onclick="hocSinhGioi()" class="button2"> Tô màu học sinh giỏi </button>
+
+      <button onclick="max()" class="button2"> Điểm trung bình lớn nhất </button>
+
+      <button onclick="index()" class="button2"> Tìm kiếm học sinh</button>
+    </div>
+
+     
+
+      <table id="display">
+        <tr>
+          <td> STT</td>
+          <td>Họ Tên</td>
+          <td>Toán</td>
+          <td>Lý</td>
+          <td>Hoá</td>
+          <td>Điểm trung bình</td>
+        </tr>
+        <tr  id="myTable1">
+          <td> STT</td>
+          <td>Họ Tên</td>
+          <td>Toán</td>
+          <td>Lý</td>
+          <td>Hoá</td>
+          <td>Điểm trung bình</td>
+        </tr>
+        
+    <script src='jsasm2.js'></script> 
+</body>
+</html>

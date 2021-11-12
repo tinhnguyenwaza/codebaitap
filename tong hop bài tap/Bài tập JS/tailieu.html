@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  
+  <title>Page Title</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <script>
+    
+
+    $(document).ready(function(){
+  $("p").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "lightblue");
+    }, 
+    click: function(){
+      $(this).css("background-color", "yellow");
+    }  
+  });
+});
+    </script>
+
+
+</head>
+<body>
+ <!--Cú pháp cơ bản là: $ ( bộ chọn ). action ()
+$(document).ready(function(){
+
+  // jQuery methods go here...
+
+});
+
+<script src="my_jquery_functions.js"></script>
+
+thay đổi css 
+$("input").focus(function(){
+  $(this).css("background-color", "#cccccc");
+});
+
+$("[href]").hide(); chọn thuộc tính
+
+
+text() - Đặt hoặc trả về nội dung văn bản của các phần tử đã chọn
+html() - Đặt hoặc trả về nội dung của các phần tử đã chọn (bao gồm cả đánh dấu HTML)
+val() - Đặt hoặc trả về giá trị của các trường biểu mẫu
+ alert($("#w3s").attr("id")); lấy thuộc tính
+vd :$("#test").html());
+$("#test").html(bién a)); đay la gấn giá trị
+
+append() - Chèn nội dung vào cuối các phần tử đã chọn
+prepend() - Chèn nội dung vào đầu các phần tử đã chọn
+after() - Chèn nội dung sau các phần tử đã chọn
+before() - Chèn nội dung trước các phần tử đã chọn
+
+
+$(document).ready(function(){ xoá â phần tử con
+  $("button").click(function(){
+    $("p").remove(".test, .demo");
+  });
+});
+
+$("#div1").remove(); xoá phần tử đãn chọn
+
+addClass() - Thêm một hoặc nhiều lớp vào các phần tử đã chọn
+removeClass() - Loại bỏ một hoặc nhiều lớp khỏi các phần tử đã chọn
+toggleClass() - Chuyển đổi giữa việc thêm / xóa các lớp khỏi các phần tử đã chọn
+css() - Đặt hoặc trả về thuộc tính style
+
+$("h1, h2, p").addClass("blue");
+  $("div").addClass("important");
+--> 
+
+<p id="p1">Enter this paragraph.</p>
+
+<p id="p2">Enter this paragraph.</p>
+</body>
+</html>

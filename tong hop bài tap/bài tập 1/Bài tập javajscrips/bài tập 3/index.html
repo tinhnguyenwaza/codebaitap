@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+   
+    <title> BÀi TẬP 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='asm3css.css'>
+
+    <script>
+        var sTT = 1; // biến sô thứ tự
+
+
+        $(document).ready(function(){ // phương thưc nhập thông ton và improt vào 
+          $("#nhap").click(function(){
+            var name = $("#name").val();
+            var diemToan= $("#diemToan").val();
+            var diemLy = $("#diemLy").val();
+            var diemHoa = $("#diemHoa").val();
+
+            //kiêm tra đữ liệu
+
+            // kiểm tra name 
+            var checkName = 0;
+            if (name == "" || name == null ) { // kiểm tra name 
+              $('span').eq(0).text('(*)Tên không được bỏ trống');
+              $('input').eq(0).addClass("colorInput");
+            } else if (!isNaN (name)) {
+              $('span').eq(0).text('(*)Tên không hợp lệ');
+              $('input').eq(0).addClass("colorInput");
+            } else if (name.length <2) {
+              $('span').eq(0).text('(*)Tên phải có 2 kí tự trở lên');
+              $('input').eq(0).addClass("colorInput");
+            } else {
+              $('span').eq(0).text('');
+              $('input').eq(0).removeClass("colorInput");
+              checkName = 1;
+            }
+
+            // kiểm tra điểm toán
+            var checkMath = 0; 
+            if(diemToan == "" || diemToan == null) {
+              $('span').eq(1).text('(*) điểm sô không được để trống');
+              $('input').eq(1).addClass("colorInput");
+           } else if (isNaN(diemToan)) {
+              $('span').eq(1).text('(*) điểm phải là số');
+              $('input').eq(1).addClass("colorInput");
+            } else if (diemToan < 0 || diemToan > 10) {
+              $('span').eq(1).text('(*) điểm sô phải <= 0 và >= 10');
+              $('input').eq(1).addClass("colorInput");
+            } else {
+              $('span').eq(1).text('');
+              $('input').eq(1).removeClass("colorInput");
+              checkMath = 1;
+            }
+
+             // kiểm tra điểm lý
+            var checkPhysics = 0;
+            if(diemLy == "" || diemLy == null) {
+              $('span').eq(2).text('(*) điểm sô không được để trống');
+              $('input').eq(2).addClass("colorInput"); 
+            } else if (isNaN(diemLy)) {
+              $('span').eq(2).text('(*) điểm phải là số');
+              $('input').eq(2).addClass("colorInput");
+            } else if (diemLy < 0 || diemLy > 10) {
+              $('span').eq(2).text('(*) điểm sô phải <= 0 và >= 10');
+              $('input').eq(2).addClass("colorInput");
+            } else {
+              $('span').eq(2).text('');
+              $('input').eq(2).removeClass("colorInput");
+              checkPhysics = 1;
+            }
+            
+             // kiểm tra điểm hoa
+             var checkMistry = 0; 
+            if(diemHoa == "" || diemHoa == null) {
+              $('span').eq(3).text('(*) điểm sô không được để trống');
+              $('input').eq(3).addClass("colorInput");
+            } else if (isNaN(diemHoa)) {
+              $('span').eq(3).text('(*) điểm phải là số');
+              $('input').eq(3).addClass("colorInput");
+            } else if (diemHoa < 0 || diemHoa > 10) {
+              $('span').eq(3).text('(*) điểm sô phải <= 0 và >= 10');
+              $('input').eq(3).addClass("colorInput");
+            } else {
+              $('span').eq(3).text('');
+              $('input').eq(3).removeClass("colorInput");
+              checkMistry = 1;
+            }
+
+            if ( checkMath == 1 && checkName == 1 && checkPhysics == 1 && checkMistry == 1 ) {
+            importTable();
+            } 
+            // phương thức import thông tin vào table
+            function importTable() {
+            $("#myTable").append(
+           "<tr ><td style=\"width:50px\">" + sTT++ + "</td><td>" + name + "</td><td>" + diemToan + "</td><td>" + diemLy 
+            + "</td><td>" + diemHoa + "</td><td>" + " " + "</td></tr>>" 
+            );
+            $("#name").val("")
+            $("#diemToan").val("");
+            $("#diemLy").val("");
+            $("#diemHoa").val("");
+           }
+
+          });  // phương thưc nhập thông ton và improt vào 
+
+
+          // phương thức tính điểm trung bình
+          $("#tinhDiemTrungBinh").click(function(){
+            $('#myTable tr').each(function() {
+            var a = 0;
+            for(var i  = 2 ; i < 5; i++) {
+             a += (parseFloat( $(this).find('td').eq(i).text()))/3;
+              $(this).find('td').eq(5).text(a.toFixed(1));
+            }
+              });
+          }); // phương thức tính điẻm trung bình
+
+
+        //phương thức tô màu lớn >= 8
+        $("#color").click(function(){
+            $('#myTable tr').each(function() {
+              var ponit = $(this).find('td').eq(5).text();
+              if (ponit >= 8 ) {
+                $(this).css("color", "red");
+              }
+              });
+          }); // phương thức tô màu ponit >= 8 
+
+
+         // phương thức tìm kiếm tên trong bảng
+         $("#indexName").click(function(){
+          var indxName = prompt("Hãy nhập tên cần tìm kiếm")
+            $('#myTable tr').each(function() {
+              var name = $(this).find("td").eq(1).text();
+              if (indxName == name  ) {
+                $(this).css("background-color", "cadetblue");
+              }
+              });
+          }); // phương thức tìm kiếm và tô màu tên 
+         
+
+            //phương thức tìm kiếm điểm  trung binh lớn nhất
+          $("#ponitMax").click(function(){
+            var a= ($( "tr").length) -1;
+            var t = $("#myTable tr").eq(1).find("td").eq(1).text();
+            alert(t);
+            
+          });   //phương thức tìm kiếm điểm  trung binh lớn nhất
+ 
+        });
+
+     
+
+    </script>
+
+</head>
+<body>
+    
+    <div class="box1">
+      <h2>Calss Marksheet</h2>
+      <label > Họ và Tên <span></span></label><br>
+      <input type="text" id="name" placeholder="nhập tên..."><br>
+      <label > Điểm môn toán<span></span></label><br>
+      <input type="text" id="diemToan" placeholder="nhập điểm toán..."><br>
+      <label > Điểm môn lý<span></span></label><br>
+      <input type="text" id="diemLy" placeholder="nhập điểm hoá..."><br>
+      <label > Điểm môn hoá<span></span></label><br>
+      <input type="text" id="diemHoa"  placeholder="nhập điểm hoá..."><br>
+      <button id="nhap">Nhập thông tin</button>
+    </div> <!-- input nhạp thông tin sinh viên-->
+
+    <!-- buton  ---------------------------->
+    <div  id="box2">  
+    <button id="tinhDiemTrungBinh"> Tính điểm trung bình</button>
+    <button id="color"> Tô màu </button>
+    <button id="indexName"> Tìm kiếm tên </button>
+    </div>
+
+    <!-- table data ------------------------------------------------------------->
+    <div id="box3"> 
+        <table>
+          <thead>
+            <tr >
+              <td style="width: 50px;">STT</td>
+              <td>Họ Tên</td>
+              <td>Toán</td>
+              <td>Lý</td>
+              <td>Hoá</td>
+              <td>Điểm trung bình</td>
+            </tr>  
+          </thead>
+          <tbody id="myTable">
+           
+          </tbody>
+          </table>
+    </div>
+
+
+</body>
+</html>

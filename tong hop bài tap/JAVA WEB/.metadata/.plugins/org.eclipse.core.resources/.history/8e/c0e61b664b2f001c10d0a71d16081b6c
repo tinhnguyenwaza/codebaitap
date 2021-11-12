@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="CSSASM1.css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1>My web</h1>
+				<h3>logo web</h3>
+			</div>
+		</div>
+		<!-- end head  -->
+
+		<div class="row">
+			<div class="col">
+				<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+					<ul class="navbar-nav">
+						<li class="nav-item active"><a class="nav-link" href="#">Active</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+						<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a>
+						</li>
+					</ul>
+					<form class="form-inline foatright" action="/action_page.php">
+						<input class="form-control mr-sm-2" type="text"
+							placeholder="Search">
+						<button class="btn btn-success" type="submit">Search</button>
+					</form>
+				</nav>
+			</div>
+		</div>
+		<!-- end navbar -->
+	</div>
+
+
+
+	<!-- phần main -->
+	<jsp:include page="Main.jsp"></jsp:include>
+
+	<!--  phần footer -->
+	<jsp:include page="Footer.jsp"></jsp:include>

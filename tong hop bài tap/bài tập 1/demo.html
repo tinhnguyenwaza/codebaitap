@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Debugging Javascript With Chrome</title>
+    <style>
+    table {
+      width: 1000px;
+      border: 1px solid black;
+    }
+
+    td {
+     
+      border: 1px solid black;
+    }
+
+
+    </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+
+  $('#table tr').each(function() {
+    var a = 0;
+    for(var i  = 0 ; i < 2; i++) {
+    a += parseFloat( $(this).find('td').eq(i).text());
+      $(this).find('td').eq(2).text(a);
+    }
+  });
+
+  
+
+
+
+  });
+  </script>
+  </head>
+
+  <body>
+    <table>
+      <thead>
+      <tr>
+        <td class="name" style="width:100px">name</td>
+        <td class="name" style="width: 700px;">#tinhDiemTrungBinh</td>
+        <td class="name" style="width: 180px;">nguyen</td>
+      </tr>
+    </thead>
+     <tbody id="table">
+      <tr >
+        <td class="name">8</td>
+        <td class="name">9</td>
+        <td class="name">nguyen</td>
+      </tr>
+      <tr>
+         <td class="name">2</td>
+         <td class="name">1</td>
+         <td class="name">1</td>
+      </tr>
+    </tbody>
+    </table>
+
+
+
+  </body>
+</html>

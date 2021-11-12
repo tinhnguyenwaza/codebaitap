@@ -1,0 +1,32 @@
+.avarta {
+	border: 3px solid green;
+	width: 800px;
+	margin: auto;
+	
+}
+
+img {
+	border-radius: 50%;
+	display: block; margin-left : auto; margin-right : auto;
+	height: 300px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+form {
+	padding: 20px 0 0 0;
+	margin: auto;
+	width: 600px
+}
+
+.sizeInput {
+	width: 600px;
+	height: 50px;
+}
+
+#styleSummit {
+	background-color: #67ac5b;
+	margin: 10px 0;	
+}

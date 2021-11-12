@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="CSSASM1.css">
+</head>
+<body>
+
+	<!-- phần main -->
+	<jsp:include page="Main.jsp"></jsp:include>
+
+	<!--  phần footer -->
+	<jsp:include page="Footer.jsp"></jsp:include>
