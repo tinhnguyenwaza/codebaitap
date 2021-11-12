@@ -1,0 +1,5 @@
+PO4   SU   5   6.0
+PO5   SU   5   6.0
+PO5   SU   5   6.0
+PO7   tinh   6   1.0
+PO7   sy   8   5.1
